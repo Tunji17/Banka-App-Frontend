@@ -1,0 +1,39 @@
+{
+  "name": "banka-app-frontend",
+  "version": "1.0.0",
+  "description": "Front-end for Banka",
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tunji17/banka-app-frontend.git"
+  },
+  "keywords": [
+    "frontend",
+    "bank",
+    "finance"
+  ],
+  "author": "Oyetunji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tunji17/banka-app-frontend/issues"
+  },
+  "homepage": "https://github.com/Tunji17/banka-app-frontend#readme"
+}
