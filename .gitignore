@@ -1,5 +1,17 @@
-# node module
+.DS_Store
 node_modules/
+/dist/
+npm-debug.log*
+/test/unit/coverage/
+.env
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
 
 # package lock
 package-lock.json
