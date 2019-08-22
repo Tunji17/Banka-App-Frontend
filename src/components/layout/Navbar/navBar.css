@@ -1,0 +1,112 @@
+/* Default attributes */
+* { 
+  box-sizing: border-box; 
+}  
+body { 
+  margin: 0px; 
+  font-family: 'segoe ui'; 
+  text-align: center; 
+}
+
+/* Nav bar styling */
+
+.nav { 
+  height: 70px; 
+  width: 100%; 
+  background-color: #ffffff; 
+  position:fixed; 
+  top:0px; 
+  border-bottom: 2px solid #693d82;
+}  
+.nav > .nav-header { 
+  display: inline; 
+  text-align: center; 
+  margin-left: 3%;  
+  float: left; 
+}  
+.nav > .nav-header > .nav-title > a { 
+  display: inline-block;  
+  font-size: 22px; 
+  color: #1B1B1B;  
+  padding: 23px 10px 13px 10px; 
+}
+.nav > .nav-btn {  
+  display: none; 
+}  
+.nav > .nav-links {  
+  display: inline;  
+  text-align: center;  
+  font-size: 17px; 
+  margin-right: 3%; 
+  float: right; 
+}  
+.nav > .nav-links > a { 
+  display: inline-block;  
+  padding: 29px 10px 13px 10px; 
+  text-decoration: none;  
+  color: #1B1B1B; 
+}  
+.nav > .nav-links > a:hover {  
+  color: #693d82;  
+  /* border: 2px solid #693d82;  */
+}  
+.nav > #nav-check {  
+  display: none; 
+}
+
+/*--------------	Media queries	------------------*/
+  /* For mobile */
+  /* min-width of 768px */
+
+@media (max-width:600px) {
+  .nav > .nav-btn { 
+    display: inline-block; 
+    position: absolute;  
+    right: 0px;  
+    top: 0px; 
+  }
+  .nav > .nav-btn > label {  
+    display: inline-block;  
+    width: 50px;  
+    height: 50px;  
+    padding: 13px; 
+  }
+  .nav > .nav-btn > label:hover {  
+    background-color: #ffffff; 
+  }
+  .nav > .nav-btn > label > span {  
+    display: block;  
+    width: 25px;  
+    height: 10px;  
+    border-top: 2px solid #1b1b1b; 
+  }
+  .nav > .nav-links {  
+    margin-top: 20px;  
+    position: absolute;  
+    display: block;  
+    width: 100%;  
+    background-color: #ffffff;   
+    height: 0px;  
+    transition: all 0.3s ease-in;  
+    overflow-y: hidden;  
+    top: 50px;  
+    left: 0px; 
+  }
+  .nav > .nav-links > a {  
+    display: block; 
+    width: 100%;  
+    border-bottom: 0.2px solid #f2def0;  
+    border-top: 0.2px solid #f2def0; 
+  }
+  .nav > .nav-links > a:hover {  
+    color: #693d82;  
+    border: 2px solid #693d82; 
+  }  
+  .nav > #nav-check:not(:checked) + .nav-links {  
+    height: 0px; 
+  }
+  .nav > #nav-check:checked + .nav-links {  
+    height: calc(100vh - 50px); 
+    overflow-y: auto;
+  }
+}
