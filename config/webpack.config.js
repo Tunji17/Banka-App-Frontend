@@ -38,7 +38,6 @@ module.exports = {
         use: [
           inDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
-          'postcss-loader',
         ],
       },
     ],
