@@ -1,3 +1,2 @@
-export const SET_NAVBAR_TITLE = 'SET_NAVBAR_TITLE';
-export const SET_NAVBAR_SIGNUP = 'SET_NAVBAR_SIGNUP';
-export const SET_NAVBAR_SIGNIN = 'SET_NAVBAR_SIGNIN';
+export const SET_LOADING = 'SET_LOADING';
+export const SETLOADING = 'SET_LOADING';

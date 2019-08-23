@@ -1,0 +1,22 @@
+h1.header-notfound
+{
+text-indent: 0;
+text-align: center;
+margin: 100px 0 0 0;
+font-size: 2.0em;
+font-weight: bold;
+page-break-before: always;
+line-height: 150%;
+}
+
+p.centered
+{
+text-indent: 0;
+margin: 1.0em 0 0 0;
+text-align: center;
+}
+
+div.notfound-body
+{
+  padding: 8%;
+}
