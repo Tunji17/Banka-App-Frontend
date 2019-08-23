@@ -8,7 +8,7 @@ import './home.css';
 const home = () => {
   return (
     <Fragment>
-      <NavBar />
+      <NavBar title="Banka App" signupText="Sign up" signinText="Sign in" />
       <HomeHeader />
       <HomeBody />
       <Footer />

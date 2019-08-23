@@ -1,25 +1,18 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import logoNav from '../../../assets/images/logo-nav.png';
 import './navBar.css';
-import NavbarContext from '../../../context/Navbar/navbarContext';
 
-const Navbar = () => {
-  const navbarContext = useContext(NavbarContext);
-  const { title, signupText, signinText } = navbarContext;
-  useEffect(() => {
-    navbarContext.setTitle('Banka App');
-    navbarContext.setSignupText('Sign up');
-    navbarContext.setSigninText('Sign in');
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+const Navbar = ({ title, signupText, signinText }) => {
   return (
     <nav className="nav">
       <div className="nav-header">
         <div className="nav-title">
           <img src={logoNav} alt="Banka App" />
-          <Link to="/">{ title.msg }</Link>
+          <Link to="/">
+            { title }
+          </Link>
         </div>
       </div>
       <div className="nav-btn">
@@ -31,12 +24,26 @@ const Navbar = () => {
       </div>
       <input type="checkbox" id="nav-check" />
       <div className="nav-links">
-        <Link to="signup.html">{ signupText.msg }</Link>
-        <Link to="signin.html">{ signinText.msg }</Link>
+        {signupText.length > 0 && (
+        <Link to="/signup">{ signupText }</Link>
+        )}
+        {signinText.length > 0 && (
+        <Link to="/signin">{ signinText }</Link>
+        )}
       </div>
     </nav>
   );
 };
 
-// Navbar.Proptypes
+Navbar.defaultProps = {
+  signupText: '',
+  signinText: '',
+};
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  signupText: PropTypes.string,
+  signinText: PropTypes.string,
+};
+
 export default Navbar;
