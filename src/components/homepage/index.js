@@ -5,7 +5,7 @@ import HomeBody from './homeBody';
 import Footer from '../layout/Footer';
 import './home.css';
 
-const home = () => {
+const Home = () => {
   return (
     <Fragment>
       <NavBar title="Banka App" signupText="Sign up" signinText="Sign in" />
@@ -16,4 +16,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;

@@ -3,7 +3,7 @@ import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 import './signin.css';
 
-const signup = () => {
+const Signup = () => {
   return (
     <Fragment>
       <Navbar title="Banka App" />
@@ -32,4 +32,4 @@ const signup = () => {
   );
 };
 
-export default signup;
+export default Signup;

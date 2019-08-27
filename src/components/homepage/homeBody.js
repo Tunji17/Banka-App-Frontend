@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import sideLogo from '../../assets/images/side-logo.jpg';
 
-const homeBody = () => {
+const HomeBody = () => {
   return (
     <Fragment>
       <section className="mid-section">
@@ -25,4 +25,4 @@ const homeBody = () => {
   );
 };
 
-export default homeBody;
+export default HomeBody;
