@@ -5,6 +5,7 @@ import AppState from './context/AppContext/AppState';
 import SignUp from './components/signup';
 import SignIn from './components/signin';
 import NotFound from './components/notfound';
+import Client from './components/client/dashboard';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/signin" component={SignIn} />
+            <Route exact path="/user" component={Client} />
             <Route component={NotFound} />
           </Switch>
         </div>
