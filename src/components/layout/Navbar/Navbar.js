@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-for */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -16,11 +18,9 @@ const Navbar = ({ title, signupText, signinText }) => {
         </div>
       </div>
       <div className="nav-btn">
-        <div className="nav-check">
-          <span />
-          <span />
-          <span />
-        </div>
+        <label htmlFor="nav-check">
+          <i className="big-icon fas fa-bars" />
+        </label>
       </div>
       <input type="checkbox" id="nav-check" />
       <div className="nav-links">
@@ -28,7 +28,9 @@ const Navbar = ({ title, signupText, signinText }) => {
         <Link to="/signup">{ signupText }</Link>
         )}
         {signinText.length > 0 && (
-        <Link to="/signin">{ signinText }</Link>
+
+        <Link to="/signin">{ signinText } <i className="fas fa-sign-in-alt" />
+        </Link>
         )}
       </div>
     </nav>
