@@ -30,6 +30,11 @@ body {
   color: #1B1B1B;  
   padding: 23px 10px 13px 10px; 
 }
+.nav > .nav-header > .nav-title > img { 
+  margin-top: 10px;
+  width: 30%; 
+  float: left; 
+}
 .nav > .nav-btn {  
   display: none; 
 }  
@@ -39,6 +44,7 @@ body {
   font-size: 17px; 
   margin-right: 3%; 
   float: right; 
+  visibility: hidden;
 }  
 .nav > .nav-links > a { 
   display: inline-block;  
@@ -91,6 +97,7 @@ body {
     overflow-y: hidden;  
     top: 50px;  
     left: 0px; 
+    visibility: visible;
   }
   .nav > .nav-links > a {  
     display: block; 
@@ -111,6 +118,6 @@ body {
   }
   .big-icon {
     margin-top: 25%;
-    font-size: 30px;
+    font-size: 45px;
   }
 }

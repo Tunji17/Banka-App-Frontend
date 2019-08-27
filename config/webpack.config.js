@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 const inDevelopment = process.env.NODE_ENV !== 'production';
-const htmlTitle = process.env.HTML_TITLE || 'React Boilerplate';
+const htmlTitle = process.env.HTML_TITLE || 'Banka App';
 
 module.exports = {
   entry: {

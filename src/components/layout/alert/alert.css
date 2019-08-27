@@ -1,0 +1,8 @@
+.alert-success{
+  font-size: small;
+  color: #693d82;
+}
+.alert-error{
+  font-size: small;
+  color: #f35858;
+}

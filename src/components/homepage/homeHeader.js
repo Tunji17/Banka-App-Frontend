@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const homeHeader = () => {
+const HomeHeader = () => {
   return (
     <section>
       <div id="firtpageitem" />
@@ -18,4 +18,4 @@ const homeHeader = () => {
   );
 };
 
-export default homeHeader;
+export default HomeHeader;
