@@ -3,6 +3,7 @@ import {
   SIGNUP_USER,
   SET_ALERT,
   REMOVE_ALERT,
+  SIGNIN_USER,
 } from '../types';
 
 export default (state, action) => {
@@ -16,6 +17,13 @@ export default (state, action) => {
       return {
         ...state,
         user: action.payload,
+        isLoading: false,
+      };
+    case SIGNIN_USER:
+      return {
+        ...state,
+        user: action.payload,
+        isAuthenticated: true,
         isLoading: false,
       };
     case SET_ALERT:

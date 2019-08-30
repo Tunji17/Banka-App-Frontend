@@ -9,6 +9,7 @@ import {
   SIGNUP_USER,
   SET_ALERT,
   REMOVE_ALERT,
+  SIGNIN_USER,
 } from '../types';
 
 const apiUrl = 'https://bankaappv1.herokuapp.com';
@@ -18,6 +19,7 @@ const AppState = ({ children }) => {
     isLoading: false,
     user: {},
     alert: null,
+    isAuthenticated: false,
   };
 
   const [state, dispatch] = useReducer(AppRedudcer, initialState);
@@ -56,6 +58,26 @@ const AppState = ({ children }) => {
     }
   };
 
+  const signInUser = async (userData) => {
+    setIsLoading();
+    try {
+      const res = await axios.post(
+        `${apiUrl}/api/v1/auth/signin`, userData,
+      );
+      dispatch({
+        type: SIGNIN_USER,
+        payload: res.data.data,
+      });
+      const { token } = res.data.data;
+      setAuthTokenHeader(token);
+      localStorage.setItem('jwtToken', token);
+      setAlert('Your login was successfully', 'success');
+    } catch (error) {
+      console.log(error.response);
+      setAlert('An error was encountered', 'error');
+    }
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -65,6 +87,8 @@ const AppState = ({ children }) => {
         signUpUser,
         alert: state.alert,
         setAlert,
+        signInUser,
+        isAuthenticated: state.isAuthenticated,
       }}
     >
       {children}
