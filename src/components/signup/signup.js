@@ -1,11 +1,12 @@
 import React, { Fragment, useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 import Alert from '../layout/alert';
 import AppContext from '../../context/AppContext/appContext';
 import './signup.css';
 
-const Signup = () => {
+const Signup = (props) => {
   const appContext = useContext(AppContext);
   const { signUpUser, setAlert } = appContext;
 
@@ -44,7 +45,7 @@ const Signup = () => {
     if (password !== confirmPassword) {
       return setAlert('Password and Confirm Password must match', 'error');
     }
-    signUpUser(userData);
+    signUpUser(userData, props.history);
   };
 
   return (
@@ -130,6 +131,10 @@ const Signup = () => {
       <Footer />
     </Fragment>
   );
+};
+
+Signup.propTypes = {
+  history: PropTypes.shape({}).isRequired,
 };
 
 export default Signup;

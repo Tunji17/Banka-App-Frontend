@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react';
 import Proptypes from 'prop-types';
+import jwtDecode from 'jwt-decode';
 import axios from 'axios';
 import { setAuthTokenHeader } from '../../helpers/setAuthToken';
 import AppContext from './appContext';
@@ -39,7 +40,7 @@ const AppState = ({ children }) => {
   };
 
 
-  const signUpUser = async (userData) => {
+  const signUpUser = async (userData, history) => {
     setIsLoading();
     try {
       const res = await axios.post(
@@ -53,12 +54,13 @@ const AppState = ({ children }) => {
       setAuthTokenHeader(token);
       localStorage.setItem('jwtToken', token);
       setAlert('Your user account was created successfully', 'success');
+      history.push('/user');
     } catch (error) {
       setAlert('An error was encountered', 'error');
     }
   };
 
-  const signInUser = async (userData) => {
+  const signInUser = async (userData, history) => {
     setIsLoading();
     try {
       const res = await axios.post(
@@ -71,9 +73,19 @@ const AppState = ({ children }) => {
       const { token } = res.data.data;
       setAuthTokenHeader(token);
       localStorage.setItem('jwtToken', token);
+      const userType = jwtDecode(token);
+      const { type, isadmin } = userType;
       setAlert('Your login was successfully', 'success');
+      if (type === 'client' && isadmin === false) {
+        history.push('/user');
+      }
+      if (type === 'staff' && isadmin === false) {
+        history.push('/staff');
+      }
+      if (type === 'staff' && isadmin === true) {
+        history.push('/admin');
+      }
     } catch (error) {
-      // console.log(error.response);
       setAlert('An error was encountered', 'error');
     }
   };

@@ -1,11 +1,12 @@
 import React, { Fragment, useContext, useState } from 'react';
+import PropTypes from 'prop-types';
 import Navbar from '../layout/Navbar';
 import Footer from '../layout/Footer';
 import Alert from '../layout/alert';
 import AppContext from '../../context/AppContext/appContext';
 import './signin.css';
 
-const Signup = () => {
+const Signin = (props) => {
   const appContext = useContext(AppContext);
   const { signInUser } = appContext;
 
@@ -19,7 +20,7 @@ const Signup = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    signInUser(userData);
+    signInUser(userData, props.history);
   };
 
   return (
@@ -70,4 +71,8 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+Signin.propTypes = {
+  history: PropTypes.shape({}).isRequired,
+};
+
+export default Signin;

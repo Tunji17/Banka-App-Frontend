@@ -38,21 +38,21 @@ body {
 .nav > .nav-btn {  
   display: none; 
 }  
-.nav > .nav-links {  
+.nav > .nav-linkks {  
   display: inline;  
   text-align: center;  
   font-size: 17px; 
   margin-right: 3%; 
   float: right; 
-  visibility: hidden;
+  display:none;
 }  
-.nav > .nav-links > a { 
+.nav > .nav-linkks > a { 
   display: inline-block;  
   padding: 29px 10px 13px 10px; 
   text-decoration: none;  
   color: #1B1B1B; 
 }  
-.nav > .nav-links > a:hover {  
+.nav > .nav-linkks > a:hover {  
   color: #693d82;  
   /* border: 2px solid #693d82;  */
 }  
@@ -86,7 +86,7 @@ body {
     height: 10px;  
     border-top: 2px solid #1b1b1b; 
   }
-  .nav > .nav-links {  
+  .nav > .nav-linkks {  
     margin-top: 20px;  
     position: absolute;  
     display: block;  
@@ -97,22 +97,22 @@ body {
     overflow-y: hidden;  
     top: 50px;  
     left: 0px; 
-    visibility: visible;
+    display:block;
   }
-  .nav > .nav-links > a {  
+  .nav > .nav-linkks > a {  
     display: block; 
     width: 100%;  
     border-bottom: 0.2px solid #f2def0;  
     border-top: 0.2px solid #f2def0; 
   }
-  .nav > .nav-links > a:hover {  
+  .nav > .nav-linkks > a:hover {  
     color: #693d82;  
     border: 2px solid #693d82; 
   }  
-  .nav > #nav-check:not(:checked) + .nav-links {  
+  .nav > #nav-check:not(:checked) + .nav-linkks {  
     height: 0px; 
   }
-  .nav > #nav-check:checked + .nav-links {  
+  .nav > #nav-check:checked + .nav-linkks {  
     height: calc(100vh - 50px); 
     overflow-y: auto;
   }

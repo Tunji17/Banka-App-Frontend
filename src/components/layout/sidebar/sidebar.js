@@ -16,6 +16,7 @@ const Sidebar = ({
   secondmenu,
   thirdmenu,
   fourthmenu,
+  dashboardUrl,
 }) => {
   return (
     <div id="menu" className="">
@@ -45,47 +46,31 @@ const Sidebar = ({
                 <ul className="menu-ul-item">
                   {firstmenu.length > 0 && (
                   <li>
-                    <div className="menu-item "><Link href="dashboard.html" className="menu-anchor active" data-menu="1"><i className="fas fa-chart-line" />&nbsp;&nbsp;{firstmenu}</Link>
+                    <div className="menu-item "><Link href={dashboardUrl} className="menu-anchor active" data-menu="1"><i className="fas fa-chart-line" />&nbsp;&nbsp;{firstmenu}</Link>
                     </div>
                   </li>
                   )}
                   {secondmenu.length > 0 && (
                   <li>
-                    <div className="menu-item"><Link href="accountHistory.html" className="menu-anchor" data-menu="2"><i className="fas fa-history" />&nbsp;&nbsp;{secondmenu}</Link>
+                    <div className="menu-item"><Link href={dashboardUrl} className="menu-anchor" data-menu="2"><i className="fas fa-history" />&nbsp;&nbsp;{secondmenu}</Link>
                     </div>
                   </li>
                   )}
                   {thirdmenu.length > 0 && (
                   <li>
-                    <div className="menu-item"><Link href="createNewBankAccount.html" className="menu-anchor" data-menu="3"><i className="fas fa-edit" />&nbsp;&nbsp;{thirdmenu}</Link>
+                    <div className="menu-item"><Link href={dashboardUrl} className="menu-anchor" data-menu="3"><i className="fas fa-edit" />&nbsp;&nbsp;{thirdmenu}</Link>
 
                     </div>
                   </li>
                   )}
                   {fourthmenu.length > 0 && (
                   <li>
-                    <div className="menu-item "><Link href="contactpage.html" className="menu-anchor" data-menu="3"><i className="fas fa-hands-helping" />&nbsp;&nbsp;{fourthmenu}</Link>
+                    <div className="menu-item "><Link href={dashboardUrl} className="menu-anchor" data-menu="3"><i className="fas fa-hands-helping" />&nbsp;&nbsp;{fourthmenu}</Link>
                     </div>
                   </li>
                   )}
                   <li>
-                    <div className="menu-item"><Link className="menu-anchor show-form" data-menu="4"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;Logout</Link>
-                      <div className="form">
-                        <form>
-                          <div className="row">
-                            <label htmlFor="balance">Are you sure you want to log out?</label>
-
-                          </div>
-                          <div className="row">
-                            <div className="column">
-                              <button type="button" className="btn-safe log-out">Yes</button>
-                            </div>
-                            <div className="column">
-                              <button type="button" className="btn-danger close-form">No</button>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
+                    <div to="/" className="menu-item"><Link className="show-form" data-menu="4"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;Logout </Link>
                     </div>
                   </li>
                 </ul>
@@ -114,6 +99,7 @@ Sidebar.propTypes = {
   secondmenu: PropTypes.string,
   thirdmenu: PropTypes.string,
   fourthmenu: PropTypes.string,
+  dashboardUrl: PropTypes.string.isRequired,
 };
 
 export default Sidebar;

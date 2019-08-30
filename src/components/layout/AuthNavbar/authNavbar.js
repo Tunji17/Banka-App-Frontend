@@ -12,6 +12,7 @@ const AuthNavbar = ({
   secondmenu,
   thirdmenu,
   fourthmenu,
+  dashboardUrl,
 }) => {
   return (
     <nav className="nav">
@@ -22,7 +23,6 @@ const AuthNavbar = ({
       </div>
       <div className="nav-btn">
         <label htmlFor="nav-check">
-          {/* <i className="big-icon fas fa-bars" /> */}
           <span />
           <span />
           <span />
@@ -30,37 +30,20 @@ const AuthNavbar = ({
         </label>
       </div>
       <input type="checkbox" id="nav-check" />
-      <div className="nav-links">
+      <div className="nav-linkks">
         {firstmenu.length > 0 && (
-        <Link to="dashboard.html"><i className="fas fa-chart-line" />&nbsp;&nbsp;{firstmenu}</Link>
+        <Link to={dashboardUrl}><i className="fas fa-chart-line" />&nbsp;&nbsp;{firstmenu}</Link>
         )}
         {secondmenu.length > 0 && (
-        <Link to="accountHistory.html"><i className="fas fa-history" />&nbsp;&nbsp;{secondmenu}</Link>
+        <Link to={dashboardUrl}><i className="fas fa-history" />&nbsp;&nbsp;{secondmenu}</Link>
         )}
         {thirdmenu.length > 0 && (
-        <Link to="createNewBankAccount.html"><i className="fas fa-edit" />&nbsp;&nbsp;{thirdmenu}</Link>
+        <Link to={dashboardUrl}><i className="fas fa-edit" />&nbsp;&nbsp;{thirdmenu}</Link>
         )}
         {fourthmenu.length > 0 && (
-        <Link to="contactpage.html"><i className="fas fa-hands-helping" />&nbsp;&nbsp;{fourthmenu}</Link>
+        <Link to={dashboardUrl}><i className="fas fa-hands-helping" />&nbsp;&nbsp;{fourthmenu}</Link>
         )}
-        <Link className="show-form"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;logout</Link>
-        <div className="form">
-          <form>
-            <div className="row">
-              <label htmlFor="balance">Are you sure you want to log out?</label>
-
-            </div>
-            <div className="row">
-              <div className="column">
-                <button type="button" className="btn-safe log-out">Yes</button>
-              </div>
-              <div className="column">
-                <button type="button" className="btn-danger close-form">No</button>
-              </div>
-            </div>
-          </form>
-        </div>
-
+        <Link to="/" className="show-form"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;logout</Link>
       </div>
     </nav>
   );
@@ -79,6 +62,7 @@ AuthNavbar.propTypes = {
   secondmenu: PropTypes.string,
   thirdmenu: PropTypes.string,
   fourthmenu: PropTypes.string,
+  dashboardUrl: PropTypes.string.isRequired,
 };
 
 export default AuthNavbar;

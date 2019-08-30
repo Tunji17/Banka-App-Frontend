@@ -19,7 +19,9 @@ const Navbar = ({ title, signupText, signinText }) => {
       </div>
       <div className="nav-btn">
         <label htmlFor="nav-check">
-          <i className="big-icon fas fa-bars" />
+          <span />
+          <span />
+          <span />
         </label>
       </div>
       <input type="checkbox" id="nav-check" />
