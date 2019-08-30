@@ -73,7 +73,7 @@ const AppState = ({ children }) => {
       localStorage.setItem('jwtToken', token);
       setAlert('Your login was successfully', 'success');
     } catch (error) {
-      console.log(error.response);
+      // console.log(error.response);
       setAlert('An error was encountered', 'error');
     }
   };
