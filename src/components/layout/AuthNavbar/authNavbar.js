@@ -45,7 +45,7 @@ const AuthNavbar = ({
         {fourthmenu.length > 0 && (
         <Link to={dashboardUrl}><i className="fas fa-hands-helping" />&nbsp;&nbsp;{fourthmenu}</Link>
         )}
-        <Link to="/" onClick={logout} className="show-form"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;logout</Link>
+        <Link to="/" onClick={logout}><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;logout</Link>
       </div>
     </nav>
   );

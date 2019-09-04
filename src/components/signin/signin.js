@@ -25,7 +25,7 @@ const Signin = (props) => {
 
   return (
     <Fragment>
-      <Navbar title="Banka App" />
+      <Navbar title="Banka App" signupText="Sign up" />
       <div className="container">
         <form onSubmit={onSubmit} className="signin-form">
           <div className="contains-form-div">

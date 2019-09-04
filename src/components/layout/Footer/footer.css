@@ -360,6 +360,12 @@ body {
     margin: 0 auto; 
   }
 
+  .app-img img { 
+    max-width: 100%; 
+    height: auto;
+    padding-left: 22%
+  }
+
   /* H3 Styling */
   h3.left { 
     color: #000; 

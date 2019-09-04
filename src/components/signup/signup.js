@@ -58,7 +58,7 @@ const Signup = (props) => {
               <h3 className="heading-info">Sign up Info</h3>
               <Alert />
               <div className="row">
-                <div className="column">
+                <div className="columnn">
                   <input
                     className="input-fields"
                     id="firstName"
@@ -70,7 +70,7 @@ const Signup = (props) => {
                   />
                   <div id="firstname_error" />
                 </div>
-                <div className="column">
+                <div className="columnn">
                   <input
                     className="input-fields"
                     id="lastName"
@@ -83,18 +83,20 @@ const Signup = (props) => {
                   <div id="lastname_error" />
                 </div>
               </div>
-              <input
-                className="input-fields"
-                id="emailAddress"
-                type="email"
-                placeholder="Enter your email adress"
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-              />
-              <div id="email_error" />
               <div className="row">
-                <div className="column">
+                <input
+                  className="input-fields"
+                  id="emailAddress"
+                  type="email"
+                  placeholder="Enter your email adress"
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                />
+                <div id="email_error" />
+              </div>
+              <div className="row">
+                <div className="columnn">
                   <input
                     className="input-fields"
                     id="password"
@@ -106,7 +108,7 @@ const Signup = (props) => {
                   />
                   <div id="password_error1" />
                 </div>
-                <div className="column">
+                <div className="columnn">
                   <input
                     className="input-fields"
                     id="confirm-password"

@@ -48,7 +48,6 @@ body {
 }  
 .nav > .nav-links > a:hover {  
   color: #693d82;  
-  /* border: 2px solid #693d82;  */
 }  
 .nav > #nav-check {  
   display: none; 
