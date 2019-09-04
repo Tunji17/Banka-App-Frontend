@@ -1,0 +1,239 @@
+/*Content container*/
+#content-container .content-container-wrapper .account-history .header{ 
+  width: 100%; 
+  height: 110px;   
+  font-size: 13px;   
+}
+#content-container .content-container-wrapper .account-history .header .header-inner{ 
+  width: 40%;
+  background-color: #ffffff; 
+  border: 2px solid #f2def0; 
+  text-align: left; 
+  border-radius:  10px 10px 10px 10px; 
+  padding-left: 10px; 
+  float: left; 
+  margin-right: 10%; 
+}
+#content-container .content-container-wrapper .account-history .header h3,h4{ 
+  margin: 10px 0px; 
+  width: 100%; 
+}
+#content-container .content-container-wrapper .account-history .history{ 
+  width: 100%; 
+  height: auto; 
+  background-color: #ffffff; 
+  margin-top: 15px; 
+  border-radius:  10px; 
+  padding-top: 20px; 
+  margin-bottom: 20px;
+}
+#content-container .content-container-wrapper .account-history .history #view-more a{ 
+  color: #693d82; 
+  margin-top: 5px; 
+  margin-bottom: 2px; 
+}
+#content-container .content-container-wrapper .account-history .history .history-container{ 
+  width: 100%; 
+  height: auto;
+  padding-left: 20px; 
+  padding-right: 20px;  
+}
+#content-container .content-container-wrapper .account-history .history .history-container .main-history{ 
+  width: 100%; 
+  height: 50px; 
+  padding: 5px 10px; 
+  border: 2px solid #f2def0; 
+}
+#content-container .content-container-wrapper .account-history .history .history-container .main-history .column
+{ 
+  float: left; 
+  width: 25%; 
+  padding-left: 2%; 
+  padding-right: 2%;  
+  overflow: hidden; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search{ 
+  width: 100%; 
+  height: 400px; 
+  background-color: #ffffff; 
+  border-radius:  5px 5px 5px 5px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-header{ 
+  width : 100%; 
+  height: 150px; 
+  background-color: #693d82; 
+  text-align: center; 
+  border-radius:  5px 5px 0px 0px;
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-header .white-background
+{ 
+  width:80%; 
+  height: 70%; 
+  display: inline-block; 
+  background-color: #ffffff; 
+  margin-top: 5%; 
+  margin-bottom: 5%; 
+  position: relative; 
+  border-radius: 5px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-header .white-background .search-inner1
+{ 
+  width: 100%;
+  float: left; 
+  text-align: left; 
+  font-size: 13px; 
+  padding-top: 20px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-header .white-background .search-inner1 h3
+{ 
+  margin: 10px;
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom{ 
+  width: 100%; 
+  height: 220px; 
+  margin-top: 20px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom .row::after{ 
+  content: "";
+  display: table; 
+  clear: both; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom .row .column{ 
+   float: left; 
+   width: 50%; 
+   padding-left: 2%; 
+   padding-right: 2%; 
+  }
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom .row .column .input-fields
+{ 
+  height : 35px; 
+  width : 100%; 
+  border-top : hidden; 
+  border-left: hidden; 
+  border-right : hidden; 
+  border-bottom : 3px solid #CCCCCC; 
+  outline : none; 
+  margin-top : 20px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom .row .search-btn
+{ 
+  background-color: #693d82; 
+  margin-top: 40px; 
+  margin-left: 5%; 
+  margin-right: 5%; 
+  border: none; 
+  color: white; 
+  width: 90%; 
+  padding: 10px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+  border-radius: 12px;
+}
+
+/*--------------	Media queries	------------------*/
+
+/* max-width of 768px */
+@media screen and (max-width: 768px) {
+  #content-container .content-container-wrapper .account-history{ 
+      width: 90%;  
+      height: auto; 
+      padding-top: 20px; 
+  }
+  #content-container .content-container-wrapper .account-history-search{ 
+      width: 90%;  
+      height: auto;
+      margin-top: 30px; 
+      border-radius:  5px 5px 0px 0px; 
+  }
+}
+
+/*	max-width of  568px*/
+@media screen and (max-width: 35.5em) {
+  #content-container .content-container-wrapper .account-history{ 
+      width: 90%;  
+      height: auto; 
+      padding-top: 20px; 
+  }
+  #content-container .content-container-wrapper .account-history-search{ 
+      width: 90%;  
+      height: auto; 
+      margin-top: 30px; 
+      border-radius:  5px 5px 0px 0px; 
+  }
+}
+
+/*	min-width of 568px max-width of 768px */
+@media (min-width: 35.5em) and (max-width: 48em) {
+  #content-container .content-container-wrapper .account-history{ 
+      width: 90%;  
+      height: auto; 
+      padding-top: 20px; 
+  }
+  #content-container .content-container-wrapper .account-history-search{ 
+      width: 90%;  
+      height: auto;
+      margin-top: 30px; 
+      border-radius:  5px 5px 0px 0px; 
+  }
+}
+
+/*	min-width of 768px max-width of 1024px */
+@media (min-width: 48em) and (max-width: 64em) {
+
+  #content-container .content-container-wrapper .account-history{ 
+      width: 80%; 
+      margin-left: 10%;
+      float: left; 
+      height: 100%; 
+      padding-top: 50px; 
+  }
+  #content-container .content-container-wrapper .account-history-search{ 
+      width: 40%; 
+      float: left; 
+      height: 100%; 
+      margin-left: 2%; 
+      border-radius:  5px 5px 0px 0px; 
+  }
+}
+
+/*	min-width of  1024px max-width of 1280px */
+@media (min-width: 64em) and (max-width: 80em) {
+
+  #content-container .content-container-wrapper .account-history{ 
+      width: 80%; 
+      margin-left: 10%;
+      float: left; 
+      height: 100%; 
+      padding-top: 50px; 
+  }
+  #content-container .content-container-wrapper .account-history-search{ 
+      width: 80%; 
+      margin-left: 10%;
+      float: left; 
+      height: 100%; 
+      margin-left: 2%; 
+      border-radius:  5px 5px 0px 0px; 
+  }
+}
+
+/*	min-width of 1280px */
+@media (min-width: 80em){
+
+  #content-container .content-container-wrapper .account-history{ 
+      width: 70%; 
+      margin-left: 15%;
+      float: left; 
+      height: 100%; 
+      padding-top: 50px; 
+  }
+  #content-container .content-container-wrapper .account-history-search{ 
+      width: 40%; 
+      float: left; 
+      height: 100%; 
+      margin-left: 2%; 
+      border-radius:  5px 5px 0px 0px; 
+  }
+}

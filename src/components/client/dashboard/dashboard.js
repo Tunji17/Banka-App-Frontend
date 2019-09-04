@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React, { Fragment, useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import jwtDecode from 'jwt-decode';
 import AuthNavbar from '../../layout/AuthNavbar';
 import Sidebar from '../../layout/sidebar';
 import AppContext from '../../../context/AppContext/appContext';
@@ -12,18 +12,20 @@ const Dashboard = ({ history }) => {
   const appContext = useContext(AppContext);
   const {
     user,
-    isAuthenticated,
     accounts,
     getUsersAccounts,
   } = appContext;
 
+  const token = localStorage.getItem('jwtToken');
+  const decoded = jwtDecode(token);
+
   useEffect(() => {
-    if (user.type !== 'client' && user.isadmin !== false && isAuthenticated !== true) {
+    if (decoded.type !== 'client' || decoded.isadmin !== false) {
       history.push('/signin');
     }
     getUsersAccounts(user.email);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [token]);
 
   return (
     <Fragment>

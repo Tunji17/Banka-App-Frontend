@@ -1,0 +1,262 @@
+/*Content container*/
+#content-container .content-container-wrapper .account-history-search .filter-search{ 
+  width: 100%; 
+  height: 400px; 
+  background-color: #ffffff; 
+  border-radius:  5px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-header
+{ 
+  width : 100%; 
+  height: 150px; 
+  background-color: #693d82; 
+  text-align: center; 
+  border-radius:  5px 5px 0px 0px;
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-header .white-background
+{ 
+  width:80%; 
+  height: 70%; 
+  display: inline-block; 
+  background-color: #ffffff; 
+  margin-top: 5%; 
+  margin-bottom: 5%; 
+  position: relative; 
+  border-radius:  5px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-header .white-background .search-inner1
+{ 
+  width: 50%; 
+  float: left; 
+  text-align: left; 
+  font-size: 13px; 
+  padding-top: 20px; 
+  overflow: hidden; 
+  height: 100px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-header .white-background .search-inner2
+{ 
+  width: 50%; 
+  float: left; 
+  text-align: right; 
+  font-size: 18px; 
+  padding-top: 20px; 
+  padding-right: 20px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-header .white-background .search-inner1 h3
+{ 
+  margin: 10px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom
+{ 
+  width: 100%; 
+  height: 220px; 
+  margin-top: 20px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom .row::after
+{ 
+  content: ""; 
+  display: table; 
+  clear: both; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom .row .column
+{  
+  float: left; 
+  width: 50%; 
+  padding-left: 2%;
+  padding-right: 2%; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom .row .column .input-fields
+{ 
+  height : 35px; 
+  width : 100%;  
+  border-top : hidden;
+  border-left: hidden; 
+  border-right : hidden; 
+  border-bottom : 3px solid #CCCCCC; 
+  outline : none; 
+  margin-top : 20px; 
+}
+#content-container .content-container-wrapper .account-history-search .filter-search .filter-bottom .row .search-btn
+{ 
+  background-color: #693d82; 
+  margin-top: 40px; 
+  margin-left: 5%; 
+  margin-right: 5%; 
+  border: none; 
+  color: white; 
+  width: 90%; 
+  padding: 10px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+  border-radius: 12px;
+}
+#content-container .content-container-wrapper .all-account-list{ 
+  width: 100%; 
+  height: 100%; 
+  margin-top: 50px; 
+  margin-bottom: 100px; 
+  /* display: none; */
+}
+#content-container .content-container-wrapper .all-account-list .header{
+  width: 100%; 
+  height: 50px; 
+  background-color: #4B0082; 
+  border-radius: 5px 5px 0px 0px; 
+  margin-bottom: 20px; 
+  color: #ffffff; 
+}
+.row:after{ 
+  content: ""; 
+  display: table; 
+  clear: both; 
+}
+.row .column{ 
+  float: left; 
+  width: 36%; 
+  padding-left: 5%;
+  padding-right: 5%; 
+  overflow-x: auto;
+}
+.row .column-delete{ 
+  float: left; 
+  width: 10%; 
+  padding-left: 10%; 
+  padding-right: 10%; 
+}
+#remove-scroll {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+#remove-scroll::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+#content-container .content-container-wrapper .all-account-list .header .row .column,.column-delete h3{ 
+  text-decoration: underline;   
+}
+#content-container .content-container-wrapper .all-account-list .bottom{ 
+  width: 100%; 
+  height: auto; 
+  background-color: #ffffff;
+}
+#content-container .content-container-wrapper .all-account-list .bottom .row{
+  border: 2px solid #f2def0;
+}
+.row .column-delete .view-single-account{ 
+  color: white; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 10px; 
+  background-color: #693d82;
+  border-radius: 20%; 
+}
+.row .column-delete .view-single-account a{ 
+  color: #ffffff;
+}
+#content-container .content-container-wrapper .all-account-list .bottom .row .column-delete h3{ 
+  text-decoration: none; 
+  color: #f42929; 
+}
+
+
+/*--------------	Media queries	------------------*/
+
+/* max-width of 768px */
+@media screen and (max-width: 768px) {
+  #content-container .content-container-wrapper .all-account-list .header{ 
+      font-size: 6px; 
+  }
+  #content-container .content-container-wrapper .all-account-list .bottom{ 
+      font-size: 6px; 
+  }
+  .row .column-delete .view-single-account{ 
+      padding: 3px 6px; 
+      margin-top: 4px; 
+  }
+} 
+
+/*	max-width of  568px*/
+@media screen and (max-width: 35.5em) {
+  #content-container .content-container-wrapper .all-account-list .header{ 
+      font-size: 9px; 
+  }
+  #content-container .content-container-wrapper .all-account-list .bottom{ 
+      font-size: 9px; 
+  }
+  .row .column-delete .view-single-account{ 
+      padding: 3px 6px; 
+      margin-top: 4px; 
+  }
+}
+
+/*	min-width of 568px max-width of 768px */
+@media (min-width: 35.5em) and (max-width: 48em) {
+  #content-container .content-container-wrapper .all-account-list .header{ 
+      font-size: 10px; 
+  }
+  #content-container .content-container-wrapper .all-account-list .bottom{ 
+      font-size: 10px; 
+  }
+  .row .column-delete .view-single-account{ 
+      padding: 8px 15px; 
+      margin-top: 8px; 
+  }
+}
+
+/*	min-width of 768px max-width of 1024px */
+@media (min-width: 48em) and (max-width: 64em) {
+  #content-container .content-container-wrapper .all-account-list .header{ 
+      font-size: 11px; 
+  }
+  #content-container .content-container-wrapper .all-account-list .bottom{ 
+      font-size: 11px; 
+  }
+  .row .column-delete .view-single-account{ 
+      padding: 8px 17px; 
+      margin-top: 12px; 
+  }
+}
+
+/*	min-width of  1024px max-width of 1280px */
+@media (min-width: 64em) and (max-width: 80em) {
+  #content-container .content-container-wrapper .all-account-list .header{ 
+      font-size: 13px; 
+  }
+  #content-container .content-container-wrapper .all-account-list .bottom{ 
+      font-size: 13px; 
+  }
+  .row .column-delete .view-single-account{ 
+      padding: 12px 22px; 
+      margin-top: 8px; 
+  }
+  #content-container .content-container-wrapper .account-history-search .filter-search .filter-header .white-background
+  {
+      margin-top: 20px; 
+      margin-bottom: 10px;  
+  }
+}
+
+/*	min-width of 1280px */
+@media (min-width: 80em){
+  #content-container .content-container-wrapper .account-history-search .filter-search .filter-header .white-background
+  {
+      margin-top: 20px; 
+      margin-bottom: 10px;
+  }
+  #content-container .content-container-wrapper .all-account-list .header{
+      font-size: 14px; 
+  }
+  #content-container .content-container-wrapper .all-account-list .bottom{ 
+      font-size: 14px; 
+  }
+  .row .column-delete .view-single-account{ 
+      padding: 12px 32px; 
+      margin-top: 10px;  
+  }
+}

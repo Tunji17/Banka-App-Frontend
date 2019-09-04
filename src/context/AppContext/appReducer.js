@@ -5,6 +5,7 @@ import {
   REMOVE_ALERT,
   SIGNIN_USER,
   SET_BANK_ACCOUNT,
+  SET_ALL_TRANSACTIONS,
 } from '../types';
 
 export default (state, action) => {
@@ -42,6 +43,12 @@ export default (state, action) => {
       return {
         ...state,
         accounts: action.payload,
+        isLoading: false,
+      };
+    case SET_ALL_TRANSACTIONS:
+      return {
+        ...state,
+        allTransactions: action.payload,
         isLoading: false,
       };
     default:

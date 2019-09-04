@@ -1,8 +1,6 @@
 /* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/heading-has-content */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/label-has-for */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -18,6 +16,10 @@ const Sidebar = ({
   fourthmenu,
   dashboardUrl,
 }) => {
+  const logout = () => {
+    localStorage.removeItem('jwtToken');
+  };
+
   return (
     <div id="menu" className="">
       <div className="menu-header">
@@ -70,8 +72,7 @@ const Sidebar = ({
                   </li>
                   )}
                   <li>
-                    <div className="menu-item"><Link to="/" className="show-form" data-menu="4"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;Logout </Link>
-                    </div>
+                    <div className="menu-item"><Link to="/" onClick={logout}><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;Logout</Link></div>
                   </li>
                 </ul>
               </div>

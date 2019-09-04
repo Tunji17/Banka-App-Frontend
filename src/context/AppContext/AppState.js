@@ -12,6 +12,7 @@ import {
   REMOVE_ALERT,
   SIGNIN_USER,
   SET_BANK_ACCOUNT,
+  SET_ALL_TRANSACTIONS,
 } from '../types';
 
 const apiUrl = 'https://bankaappv1.herokuapp.com';
@@ -23,6 +24,7 @@ const AppState = ({ children }) => {
     alert: null,
     isAuthenticated: false,
     accounts: [],
+    allTransactions: [],
   };
 
   const [state, dispatch] = useReducer(AppRedudcer, initialState);
@@ -107,6 +109,21 @@ const AppState = ({ children }) => {
     }
   };
 
+  const getAllTransactions = async () => {
+    setIsLoading();
+    try {
+      const token = localStorage.getItem('jwtToken');
+      setAuthTokenHeader(token);
+      const resAccount = await axios.get(`${apiUrl}/api/v1/transactions`);
+      dispatch({
+        type: SET_ALL_TRANSACTIONS,
+        payload: resAccount.data.data,
+      });
+    } catch (error) {
+      console.log(error.response.data, 'error');
+    }
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -120,6 +137,8 @@ const AppState = ({ children }) => {
         isAuthenticated: state.isAuthenticated,
         accounts: state.accounts,
         getUsersAccounts,
+        allTransactions: state.allTransactions,
+        getAllTransactions,
       }}
     >
       {children}

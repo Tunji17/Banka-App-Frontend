@@ -39,12 +39,11 @@ body {
   display: none; 
 }  
 .nav > .nav-linkks {  
-  display: inline;  
+  display: none;  
   text-align: center;  
   font-size: 17px; 
   margin-right: 3%; 
-  float: right; 
-  display:none;
+  float: right;
 }  
 .nav > .nav-linkks > a { 
   display: inline-block;  
@@ -87,6 +86,7 @@ body {
     border-top: 2px solid #1b1b1b; 
   }
   .nav > .nav-linkks {  
+    display: block;   
     margin-top: 20px;  
     position: absolute;  
     display: block;  
@@ -94,10 +94,9 @@ body {
     background-color: #ffffff;   
     height: 0px;  
     transition: all 0.3s ease-in;  
-    overflow-y: hidden;  
+    overflow-y: hidden; 
     top: 50px;  
     left: 0px; 
-    display:block;
   }
   .nav > .nav-linkks > a {  
     display: block; 
@@ -109,6 +108,9 @@ body {
     color: #693d82;  
     border: 2px solid #693d82; 
   }  
+  /* .nav > #nav-check {  
+    display: block; 
+  } */
   .nav > #nav-check:not(:checked) + .nav-linkks {  
     height: 0px; 
   }

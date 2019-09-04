@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
@@ -14,6 +13,10 @@ const AuthNavbar = ({
   fourthmenu,
   dashboardUrl,
 }) => {
+  const logout = () => {
+    localStorage.removeItem('jwtToken');
+  };
+
   return (
     <nav className="nav">
       <div className="nav-header">
@@ -26,7 +29,6 @@ const AuthNavbar = ({
           <span />
           <span />
           <span />
-
         </label>
       </div>
       <input type="checkbox" id="nav-check" />
@@ -43,7 +45,7 @@ const AuthNavbar = ({
         {fourthmenu.length > 0 && (
         <Link to={dashboardUrl}><i className="fas fa-hands-helping" />&nbsp;&nbsp;{fourthmenu}</Link>
         )}
-        <Link to="/" className="show-form"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;logout</Link>
+        <Link to="/" onClick={logout} className="show-form"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;logout</Link>
       </div>
     </nav>
   );
