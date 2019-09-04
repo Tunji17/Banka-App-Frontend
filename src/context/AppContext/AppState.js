@@ -11,6 +11,7 @@ import {
   SET_ALERT,
   REMOVE_ALERT,
   SIGNIN_USER,
+  SET_BANK_ACCOUNT,
 } from '../types';
 
 const apiUrl = 'https://bankaappv1.herokuapp.com';
@@ -21,6 +22,7 @@ const AppState = ({ children }) => {
     user: {},
     alert: null,
     isAuthenticated: false,
+    accounts: [],
   };
 
   const [state, dispatch] = useReducer(AppRedudcer, initialState);
@@ -86,7 +88,22 @@ const AppState = ({ children }) => {
         history.push('/admin');
       }
     } catch (error) {
-      setAlert('An error was encountered', 'error');
+      setAlert(error.response.data.message, 'error');
+    }
+  };
+
+  const getUsersAccounts = async (email) => {
+    setIsLoading();
+    try {
+      const token = localStorage.getItem('jwtToken');
+      setAuthTokenHeader(token);
+      const resAccount = await axios.get(`${apiUrl}/api/v1/user/${email}/accounts`);
+      dispatch({
+        type: SET_BANK_ACCOUNT,
+        payload: resAccount.data.data,
+      });
+    } catch (error) {
+      console.log(error.response.data, 'error');
     }
   };
 
@@ -101,6 +118,8 @@ const AppState = ({ children }) => {
         setAlert,
         signInUser,
         isAuthenticated: state.isAuthenticated,
+        accounts: state.accounts,
+        getUsersAccounts,
       }}
     >
       {children}

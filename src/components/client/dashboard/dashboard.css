@@ -1,0 +1,114 @@
+#content-container .content-container-box{
+  background-color: #ffffff; 
+  border-bottom: 1px solid #e4e5e6; 
+  width: 40%; 
+  height: 270px; 
+  float: left; 
+  margin-left: 4%; 
+  margin-right: 4%; 
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow:    0px 2px 8px 0px rgba(50, 50, 50, 0.1);
+  box-shadow:         0px 2px 8px 0px rgba(50, 50, 50, 0.1);
+  border-radius:  10px 0px 20px 20px;
+  -webkit-border-radius: 10px 0px 20px 20px;
+  -moz-border-radius:  10px 0px 20px 20px;
+}
+#content-container .content-container-box .box-content{ 
+  width:auto; 
+  height: auto;  
+}
+#content-container .content-container-box .box-content .box-content-item
+{ 
+  width:100%; 
+  height: 60px; 
+  margin: 10px 0px; 
+  padding: 10px 10px; 
+}
+#content-container .content-container-box .box-content .box-content-item .bank-account
+{ 
+  width:60%; 
+  margin: 0px; 
+  float: left;
+}
+#content-container .content-container-box .box-content .box-content-item .bank-account h2, h4, h5
+{
+  margin: 0px; 
+  margin-bottom: 5px;
+}
+#content-container .content-container-box .box-content .box-content-item .bank-account-active{
+  margin: 0px; 
+  width: 40%; 
+  color: #50CD08; 
+  float: left; 
+  font-size: 10px
+}
+#content-container .content-container-box .box-content .box-content-item .bank-account-active .bank-account-button
+{ 
+  background-color: white; 
+  color: #1b1b1b; 
+  border: 2px solid #693d82; 
+  padding: 10px 15px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 12px;
+}
+#content-container .content-container-box .box-content .box-content-item .bank-account-active .bank-account-button a
+{ 
+  color: #1b1b1b; 
+}
+#content-container .content-container-box .box-content .box-content-item .bank-account-active .bank-account-button:hover
+{ 
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); 
+}
+#content-container .content-container-box .box-content .box-content-item .bank-account-unactive
+{
+  margin: 0px; 
+  width: 40%; 
+  color: #f42929; 
+  float: left; 
+  font-size: 10px
+}
+#content-container .content-container-box .box-content .box-content-header
+{ 
+  width: 100%; 
+  height: 45px; 
+  background-color: #693d82; 
+  border-radius: 10px 0px 0px 0px; 
+  -webkit-border-radius: 10px 0px 0px 0px; 
+  -moz-border-radius: 10px 0px 0px 0px;  
+}
+#content-container .content-container-box .box-content .box-content-header h3 {
+   margin: 2px 20px; 
+   padding: 7px 0px; 
+   color: #ffffff; 
+   float: left;
+}
+
+/*--------------	Media queries	------------------*/
+
+/*	max-width of  568px*/
+@media screen and (max-width: 35.5em) {
+#content-container .content-container-box{
+   width: 60%; margin-left: 20% 
+  }
+}
+
+/*	min-width of 568px max-width of 768px */
+
+@media (min-width: 35.5em) and (max-width: 48em) {
+#content-container .content-container-box{ 
+  width: 60%; 
+  margin-left: 20% 
+}
+
+}
+
+/*	min-width of 768px max-width of 1024px */
+@media (min-width: 48em) and (max-width: 64em) {
+#content-container .content-container-box{ 
+  width: 60%; 
+  margin-left: 20% 
+}
+}

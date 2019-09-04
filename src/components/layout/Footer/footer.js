@@ -45,7 +45,7 @@ const footer = () => {
 
       <div className="app-img">
         <img src={PlaystoreIcon} alt="" />
-        <div>Logo made with <Link to="https://www.designevo.com/en/" title="Free Online Logo Maker">DesignEvo</Link></div>
+        <div className="app-text">Logo made with <Link to="https://www.designevo.com/en/" title="Free Online Logo Maker">DesignEvo</Link></div>
       </div>
 
 

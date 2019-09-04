@@ -70,7 +70,7 @@ const Sidebar = ({
                   </li>
                   )}
                   <li>
-                    <div to="/" className="menu-item"><Link className="show-form" data-menu="4"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;Logout </Link>
+                    <div className="menu-item"><Link to="/" className="show-form" data-menu="4"><i className="fas fa-sign-out-alt" />&nbsp;&nbsp;Logout </Link>
                     </div>
                   </li>
                 </ul>

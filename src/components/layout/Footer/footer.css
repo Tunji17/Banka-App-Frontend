@@ -22,9 +22,10 @@ body {
     background-color:#fff; 
     margin: 0 auto; 
   }
-  #app-img img { 
+  .app-img img { 
     max-width: 100%; 
     height: auto;
+    padding-left: 42%
   }
 
   /* H3 Styling */
@@ -196,7 +197,11 @@ body {
     background-color:#fff; 
     margin: 0 auto; 
   }
-
+  .app-img img { 
+    max-width: 100%; 
+    height: auto;
+    padding-left: 40%
+  }
   /* H3 Styling */
   h3.left { 
     color: #000; 
